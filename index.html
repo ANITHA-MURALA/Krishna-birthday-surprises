@@ -1,11 +1,281 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Happy Birthday Krishna ❤️</title><style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#09060d,#2a0919,#09060d);color:#fff;font-family:Arial,sans-serif;text-align:center}section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px 16px}.box{max-width:900px;width:100%}h1{font-size:clamp(52px,13vw,90px);color:#ff9bc6;margin:10px}h2{font-size:clamp(30px,7vw,48px)}p{font-size:18px;line-height:1.7}button{padding:15px 28px;border-radius:30px;border:1px solid #aaa;background:#ffffff18;color:#fff;font-size:17px}.heart{font-size:65px;animation:p 1.4s infinite}@keyframes p{50%{transform:scale(1.15)}}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{background:#fff;padding:7px;border-radius:12px;box-shadow:0 10px 30px #0008}.card img{width:100%;height:300px;object-fit:cover;border-radius:8px;display:block}.letter{max-width:700px;background:#fff;color:#43152a;padding:30px;border-radius:20px}.letter p{color:#43152a}.music{position:fixed;right:14px;bottom:14px;z-index:5;background:#ff4f86;border:0;font-size:14px}@media(max-width:500px){.gallery{grid-template-columns:1fr}.card img{height:360px}}</style></head><body>
-<audio id="song" loop preload="auto"><source src="kolu-kolu.mp3" type="audio/mpeg"></audio>
-<section id="home"><div class="box"><div class="heart">❤️</div><p>A little surprise for someone special ❤️</p><h1>Krishna</h1><p>Happy Birthday, my favourite person.</p><button onclick="startSurprise()">Open Your Surprise ♥</button></div></section>
-<section><div class="box"><h2>Our Memories 📸</h2><div class="gallery">
-<div class="card"><img src="photos/photo1.jpg"></div><div class="card"><img src="photos/photo2.jpg"></div><div class="card"><img src="photos/photo3.jpg"></div><div class="card"><img src="photos/photo4.jpg"></div><div class="card"><img src="photos/photo5.jpg"></div><div class="card"><img src="photos/photo6.jpg"></div><div class="card"><img src="photos/photo7.jpg"></div>
-</div></div></section>
-<section><div class="letter"><h2>Dear Krishna ❤️</h2><p>If I could give you one thing today, it would be the ability to see yourself through my eyes — then you'd know just how special you are to me.</p><p>Every memory with you is precious. I wish you happiness, success and countless beautiful moments.</p><p>Happy Birthday, my favourite person. ❤️</p></div></section>
-<section><div class="box"><div class="heart">💗</div><h2>Happy Birthday, Krishna! 🎂</h2><p>Made with lots of love. ❤️</p></div></section>
-<button class="music" id="mb" onclick="toggleMusic()">🎵 Music</button>
-<script>const s=document.getElementById('song'),b=document.getElementById('mb');function startSurprise(){s.play().then(()=>b.textContent='⏸️ Music').catch(()=>b.textContent='🎵 Tap Music');document.querySelectorAll('section')[1].scrollIntoView({behavior:'smooth'})}function toggleMusic(){if(s.paused){s.play().then(()=>b.textContent='⏸️ Music')}else{s.pause();b.textContent='🎵 Music'}}</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Krishna ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#09030d,#350b25,#100513);
+color:white;
+text-align:center;
+overflow-x:hidden
+}
+
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:30px 15px
+}
+
+.box{max-width:900px;width:100%}
+
+h1{
+font-size:clamp(55px,15vw,100px);
+color:#ff9acb;
+margin:10px;
+text-shadow:0 0 25px #ff4f9a
+}
+
+h2{font-size:clamp(30px,8vw,55px)}
+
+p{
+font-size:19px;
+line-height:1.7
+}
+
+button{
+padding:15px 28px;
+border:0;
+border-radius:30px;
+background:#ff4f87;
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 20px #ff4f87
+}
+
+.teddy{
+font-size:110px;
+animation:bounce 2s infinite
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-20px) rotate(3deg)}
+}
+
+.hearts{
+font-size:30px;
+margin:15px;
+animation:float 2s infinite alternate
+}
+
+@keyframes float{
+from{transform:translateY(0)}
+to{transform:translateY(-12px)}
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:30px
+}
+
+.card{
+background:#ffffff15;
+border:1px solid #ff9acb55;
+border-radius:25px;
+padding:25px;
+font-size:75px;
+box-shadow:0 10px 30px #0008
+}
+
+.card:nth-child(1){transform:rotate(-4deg)}
+.card:nth-child(2){transform:rotate(3deg)}
+.card:nth-child(3){transform:rotate(-2deg)}
+.card:nth-child(4){transform:rotate(4deg)}
+.card:nth-child(5){transform:rotate(-3deg)}
+.card:nth-child(6){transform:rotate(2deg)}
+
+.letter{
+max-width:700px;
+background:#ffd8e8;
+color:#4a1630;
+padding:35px;
+border-radius:25px;
+box-shadow:0 0 30px #ff6fa8
+}
+
+.letter p{
+color:#4a1630
+}
+
+.music{
+position:fixed;
+right:15px;
+bottom:15px;
+z-index:10;
+font-size:15px;
+padding:13px 20px
+}
+
+@media(max-width:600px){
+.gallery{grid-template-columns:repeat(2,1fr)}
+.card{font-size:55px;padding:18px}
+.teddy{font-size:90px}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="song" loop>
+<source src="kolu-kolu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- FIRST PAGE -->
+<section>
+<div class="box">
+
+<div class="hearts">❤️ ✨ 💗 ✨ ❤️</div>
+
+<div class="teddy">🧸</div>
+
+<p>A little surprise for someone very special...</p>
+
+<h1>Krishna</h1>
+
+<p>Happy Birthday, my favourite person ❤️</p>
+
+<button onclick="startSurprise()">
+Open Your Surprise ❤️
+</button>
+
+</div>
+</section>
+
+
+<!-- TEDDY MEMORIES -->
+<section>
+<div class="box">
+
+<h2>Our Little Teddy Memories 🧸❤️</h2>
+
+<p>Some cute little moments just for you...</p>
+
+<div class="gallery">
+
+<div class="card">🧸❤️🧸</div>
+
+<div class="card">🧸💻</div>
+
+<div class="card">🧸💌</div>
+
+<div class="card">🧸🎒</div>
+
+<div class="card">🧸👑</div>
+
+<div class="card">🧸🌅🧸</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- LOVE LETTER -->
+<section>
+<div class="letter">
+
+<h2>Dear Krishna ❤️</h2>
+
+<p>
+If I could give you one thing today,
+it would be the ability to see yourself
+through my eyes — then you'd know
+just how special you are to me.
+</p>
+
+<p>
+Every memory with you is precious.
+I wish you happiness, success,
+and countless beautiful moments.
+</p>
+
+<p>
+No matter how many birthdays come,
+I hope every one of them brings
+you more happiness and beautiful memories.
+</p>
+
+<h3>Happy Birthday, Krishna ❤️</h3>
+
+<div class="teddy">🧸💗</div>
+
+</div>
+</section>
+
+
+<!-- FINAL -->
+<section>
+<div class="box">
+
+<div class="hearts">💗 ✨ ❤️ ✨ 💗</div>
+
+<div class="teddy">🧸🎂</div>
+
+<h2>Happy Birthday, Krishna! 🎂</h2>
+
+<p>Made with lots and lots of love ❤️</p>
+
+<p>🧸 ❤️ 🧸</p>
+
+</div>
+</section>
+
+
+<button class="music" id="musicBtn" onclick="toggleMusic()">
+🎵 Music
+</button>
+
+
+<script>
+
+const song=document.getElementById("song");
+const musicBtn=document.getElementById("musicBtn");
+
+function startSurprise(){
+
+song.play().then(()=>{
+musicBtn.innerHTML="⏸️ Music";
+}).catch(()=>{
+musicBtn.innerHTML="🎵 Tap Music";
+});
+
+document.querySelectorAll("section")[1].scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+function toggleMusic(){
+
+if(song.paused){
+
+song.play().then(()=>{
+musicBtn.innerHTML="⏸️ Music";
+});
+
+}else{
+
+song.pause();
+musicBtn.innerHTML="🎵 Music";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
