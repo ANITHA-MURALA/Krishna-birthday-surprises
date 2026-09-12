@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,10 @@ justify-content:center;
 padding:30px 15px
 }
 
-.box{max-width:900px;width:100%}
+.box{
+max-width:900px;
+width:100%
+}
 
 h1{
 font-size:clamp(55px,15vw,100px);
@@ -35,7 +39,9 @@ margin:10px;
 text-shadow:0 0 25px #ff4f9a
 }
 
-h2{font-size:clamp(30px,8vw,55px)}
+h2{
+font-size:clamp(30px,8vw,55px)
+}
 
 p{
 font-size:19px;
@@ -120,17 +126,27 @@ padding:13px 20px
 }
 
 @media(max-width:600px){
-.gallery{grid-template-columns:repeat(2,1fr)}
-.card{font-size:55px;padding:18px}
-.teddy{font-size:90px}
+.gallery{
+grid-template-columns:repeat(2,1fr)
+}
+
+.card{
+font-size:55px;
+padding:18px
+}
+
+.teddy{
+font-size:90px
+}
 }
 </style>
 </head>
 
 <body>
 
+<!-- BACKGROUND MUSIC -->
 <audio id="song" loop>
-<source src="kolu-kolu.mp3" type="audio/mpeg">
+<source src="WhatsApp Audio 2026-09-12 at 11.12.37 AM.mpeg" type="audio/mpeg">
 </audio>
 
 <!-- FIRST PAGE -->
@@ -216,7 +232,7 @@ you more happiness and beautiful memories.
 </section>
 
 
-<!-- FINAL -->
+<!-- FINAL PAGE -->
 <section>
 <div class="box">
 
@@ -234,6 +250,7 @@ you more happiness and beautiful memories.
 </section>
 
 
+<!-- MUSIC BUTTON -->
 <button class="music" id="musicBtn" onclick="toggleMusic()">
 🎵 Music
 </button>
@@ -241,15 +258,19 @@ you more happiness and beautiful memories.
 
 <script>
 
-const song=document.getElementById("song");
-const musicBtn=document.getElementById("musicBtn");
+const song = document.getElementById("song");
+const musicBtn = document.getElementById("musicBtn");
 
 function startSurprise(){
 
-song.play().then(()=>{
-musicBtn.innerHTML="⏸️ Music";
-}).catch(()=>{
-musicBtn.innerHTML="🎵 Tap Music";
+song.play().then(function(){
+
+musicBtn.innerHTML = "⏸️ Music";
+
+}).catch(function(){
+
+musicBtn.innerHTML = "🎵 Tap Music";
+
 });
 
 document.querySelectorAll("section")[1].scrollIntoView({
@@ -258,18 +279,26 @@ behavior:"smooth"
 
 }
 
+
 function toggleMusic(){
 
 if(song.paused){
 
-song.play().then(()=>{
-musicBtn.innerHTML="⏸️ Music";
+song.play().then(function(){
+
+musicBtn.innerHTML = "⏸️ Music";
+
+}).catch(function(){
+
+musicBtn.innerHTML = "🎵 Tap Music";
+
 });
 
 }else{
 
 song.pause();
-musicBtn.innerHTML="🎵 Music";
+
+musicBtn.innerHTML = "🎵 Music";
 
 }
 
